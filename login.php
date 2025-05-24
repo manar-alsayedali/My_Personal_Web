@@ -1,5 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+$kullanici    = $_POST['kullaniciadi'];
+$sifre    = $_POST['sifre'];
+
+$kul="manar.ali@ogr.sakarya.edu.tr";
+$pas="G221210558";
+
+  if ($sifre == $pas && $kullanici==$kul) {
+      
+      $sonuc= " Hoş Geldiniz G221210558";
+      
+      
+
+  }
+
+else {
+    
+    $sonuc= "yanlış kullanıcı adı veya şifre!!! <br> Tekrar dene ";
+}
+
+?>
+
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,9 +34,8 @@
     <title>Manar Alsayed Ali</title>
 </head>
 <body>
-    
-    <div>
-        <header>
+
+<header>
             <a class="navbar-brand logo" href="index.html">Web Sayfası</a>
         <nav class="navbar navbar-expand-lg navbar-light navigation">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +56,7 @@
                       <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="alanlarim.html">İlgi Alanlarım</a>
+                      <a class="nav-link" href="İlgiAlanlarim.html">İlgi Alanlarım</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="iletisim.html">İletişim</a>
@@ -50,37 +70,13 @@
         </nav>
       </div>
     </header>
-<div>
-
-    <section class="hakkımda">
-        <div class="container-fluid ">
-            <h2>Hakkımda:</h2>
-            <p>Merhaba ben Manar,<br>motive ve hevesli bir bireyim, araştırmayı çok severim.kendimi iş alanında geliştirmeye çalışıyorum.<br>Şu anda araştırma becereklerimi iyileştirmek için ingilizce öğreniyorum.</p>
-            <h2>Hobilerim:</h2>
-            <div class="hobby-container">
-                <div class="hobby-item">
-                    <img src="fotograflar/kitap.jpeg" alt="Kitap Okuma">
-                    <p>Kitap Okuma</p>
-                </div>
-                <div class="hobby-item">
-                    <img src="fotograflar/fakulte.jpeg" alt="Fotoğraf Çekmek">
-                    <p>Fotoğraf Çekmek</p>
-                </div>
-                <div class="hobby-item">
-                    <img src="fotograflar/puzzle.jpg" alt="Puzzle">
-                    <p>Puzzle</p>
-                </div>
-                <div class="hobby-item">
-                    <img src="fotograflar/el..sanatlari.jpeg" alt="El Sanatları">
-                    <p>El Sanatları</p>
-                </div>
-            </div>
-            <h2>Bildiğim Diller:</h2>
-            <p>Arapça %100 (ana dili) <br>Türkçe %80 <br>English %30</p>
-        </div>
-    </section>
     
-
+    <h1 style="padding-top:150px";>
+    
+    <?php  echo $sonuc  ?>
+        
+        
+    </h1>
     
     <footer>
         <div class="footer-content">
@@ -90,6 +86,6 @@
           <a href="https://www.facebook.com/manar.alsayedali.90" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
       </footer>
-
-</body>
+    
+    </body>
 </html>

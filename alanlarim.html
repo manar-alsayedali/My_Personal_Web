@@ -13,7 +13,6 @@
     <title>Manar Alsayed Ali</title>
 </head>
 <body>
-    
     <div>
         <header>
             <a class="navbar-brand logo" href="index.html">Web Sayfası</a>
@@ -48,37 +47,33 @@
                 </ul>
             </div>
         </nav>
-      </div>
+      
     </header>
 <div>
 
-    <section class="hakkımda">
-        <div class="container-fluid ">
-            <h2>Hakkımda:</h2>
-            <p>Merhaba ben Manar,<br>motive ve hevesli bir bireyim, araştırmayı çok severim.kendimi iş alanında geliştirmeye çalışıyorum.<br>Şu anda araştırma becereklerimi iyileştirmek için ingilizce öğreniyorum.</p>
-            <h2>Hobilerim:</h2>
-            <div class="hobby-container">
-                <div class="hobby-item">
-                    <img src="fotograflar/kitap.jpeg" alt="Kitap Okuma">
-                    <p>Kitap Okuma</p>
-                </div>
-                <div class="hobby-item">
-                    <img src="fotograflar/fakulte.jpeg" alt="Fotoğraf Çekmek">
-                    <p>Fotoğraf Çekmek</p>
-                </div>
-                <div class="hobby-item">
-                    <img src="fotograflar/puzzle.jpg" alt="Puzzle">
-                    <p>Puzzle</p>
-                </div>
-                <div class="hobby-item">
-                    <img src="fotograflar/el..sanatlari.jpeg" alt="El Sanatları">
-                    <p>El Sanatları</p>
-                </div>
-            </div>
-            <h2>Bildiğim Diller:</h2>
-            <p>Arapça %100 (ana dili) <br>Türkçe %80 <br>English %30</p>
-        </div>
-    </section>
+    <script>
+    
+   
+
+        fetch('https://newsapi.org/v2/everything?q=apple&from=2023-05-20&to=2023-05-20&sortBy=popularity&apiKey=1578a2bf7ad64ee7899a1ac753efe344')
+         .then(response => response.json())
+         .then(data => displayNews(data.articles[0])); // Get only the top article
+     
+     function displayNews(article) {
+         let newsContainer = document.getElementById('top-news');
+         newsContainer.innerHTML = `
+             <h2><a href="${article.url}">${article.title}</a></h2>
+             <p>${article.description}</p>
+             <img src="${article.urlToImage}" alt="${article.title}">`;
+     }
+     
+     
+         </script>
+     
+         
+     <div id="top-news">
+     </div>
+
     
 
     
@@ -90,6 +85,7 @@
           <a href="https://www.facebook.com/manar.alsayedali.90" target="_blank"><i class="fa-brands fa-facebook"></i></a>
         </div>
       </footer>
-
+</div>
+</div>
 </body>
 </html>

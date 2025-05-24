@@ -1,1 +1,1 @@
-# My_Personal_Web
+# web_projesi
